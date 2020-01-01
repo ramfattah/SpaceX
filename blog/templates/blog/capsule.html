@@ -1,0 +1,38 @@
+{% extends "blog/base.html" %} {% block caps %} {% load humanize %}
+
+<section
+  class="p5 mt-5 shadow container rounded"
+  style=" background-image: url(https://www.spacex.com/sites/all/themes/spacex2012/images/dragon/slideshow/Dragon_Carousel_0003_6.jpg);"
+>
+  <a class="text-white">Capsules</a>
+</section>
+
+<div class="container mt-5 mb-3">
+  <ul class="list-group">
+    <strong>
+      <li
+      class="list-group-item bg-light d-flex justify-content-between align-items-center"
+    >
+      <span class="badge badge-dark badge-pill text-white"
+        >Capsule Serial</span
+      >
+      <span class="container font-italic">Details</span>
+      <span class="container ml-5">Capsule ID</span>
+      <span class="badge badge-primary badge-pill">Missions</span>
+    </li>
+    </strong>
+    {% for c in cap %}
+    <li
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <span class="badge badge-dark badge-pill text-white"
+        >{{c.capsule_serial}}</span
+      >
+      <span class="container font-italic">{{c.details}}</span>
+      <span class="container ml-5">{{c.capsule_id}}</span>
+      <span class="badge badge-primary badge-pill">{{c.missions.0.name}}</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock caps %}

@@ -1,0 +1,35 @@
+{% extends "blog/base.html" %} {% block caps %} {% load humanize %}
+
+<section
+  class="p5 mt-5 shadow rounded container"
+  style=" background-image: url(https://upload.wikimedia.org/wikipedia/commons/5/54/CRS-8_%2826239020092%29.jpg);"
+>
+  <a class="text-white">Landing Pads</a>
+</section>
+
+
+<div class="container mt-5 mb-3">
+  {% for c in lan %}
+  <div class="list-group mb-2 card-match">
+    <a class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{c.full_name}}</h5>
+        <small class="text-muted">Status - {{c.status}}</small>
+      </div>
+      <p class="mb-1">{{c.details}}</p>
+      <small class="text-muted">
+          <strong>Location: </strong> {{c.location.name}}, {{c.location.region}}
+      </small>
+      <br>
+      <small class="text-muted">
+          <strong>Attempted Landings: </strong> {{c.attempted_landings}}
+      </small>
+      <br>
+      <small class="text-muted">
+          <strong>Successful Landings: </strong> {{c.successful_landings}}
+      </small>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock caps %}

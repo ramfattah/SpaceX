@@ -1,0 +1,44 @@
+{% extends "blog/base.html" %} {% block caps %} {% load humanize %}
+
+<section
+  class="p5 mt-5 shadow container rounded"
+  style=" background-image: url(https://www.spacex.com/sites/all/themes/spacex2012/images/dragon/slideshow/Dragon_Carousel_0003_6.jpg);"
+>
+  <a class="text-white">Dragons</a>
+</section>
+
+
+
+<div class="container mt-5 mb-3">
+  {% for c in dra %}
+  <div class="list-group card-match">
+    <a class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{c.name}}</h5>
+        <small class="text-muted">First Flight {{c.first_flight}}</small>
+      </div>
+      <p class="mb-1">{{c.description}}</p>
+      <small class="text-muted"
+        ><strong>Thrusters: </strong>Type - {{c.thrusters.0.type}}
+        <strong>|</strong> Fuel 1 - {{c.thrusters.0.fuel_1}}
+        <strong>|</strong> Fuel 2 - {{c.thrusters.0.fuel_2}}</small
+      >
+      <br />
+      <small class="text-muted"
+        ><strong>Launch Payload Mass: </strong>kg - {{c.launch_payload_mass.kg}}
+        <strong>|</strong> lb - {{c.launch_payload_mass.lb}}</small
+      >
+      <br />
+      <small class="text-muted"
+        ><strong>Return Payload Mass: </strong>kg - {{c.return_payload_mass.kg}}
+        <strong>|</strong> lb - {{c.return_payload_mass.lb}}</small
+      >
+      <br />
+      <small class="text-muted"
+        ><strong>Trunk: </strong>Volume Cubic Meters - {{c.trunk.trunk_volume.cubic_meters}}</small
+      >
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock caps %}
