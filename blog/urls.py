@@ -9,4 +9,10 @@ urlpatterns = [
     path('dragons/', views.dragon, name='dragon'),
     path('history/', views.history, name='history'),
     path('landing/', views.landing_pads, name='landing'),
+    path('launches/', views.launch, name='launch'),
+    path('missions/', views.mission, name='mission'),
+    path('payloads/', views.payload, name='payload'),
+    path('rockets/', views.rocket, name='rocket'),
+    path('roadster/', views.roadster, name='roadster'),
+    path('ships/', views.ship, name='ship'),
 ]

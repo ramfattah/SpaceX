@@ -1,0 +1,24 @@
+{% extends "blog/base.html" %} {% block caps %} {% load humanize %}
+
+<section
+  class="p5 mt-5 shadow rounded container"
+  style=" background-image: url(https://upload.wikimedia.org/wikipedia/commons/1/1a/Elon_Musk%27s_Tesla_Roadster_%2840110297852%29.jpg);"
+>
+  <a class="text-white">Roadster</a>
+</section>
+
+
+<div class="container">
+    <div class="blog-post">
+        <h2 class="blog-post-title">{{road.name}}</h2>
+        <p class="blog-post-meta">
+          Launch Date {{road.launch_date_utc}}
+        </p>
+  
+        <p>
+          {{road.details}}
+        </p>
+        <small class="text-muted"><strong>Orbit Type </strong> - {{ road.orbit_type }}</small>
+      </div>
+</div>
+{% endblock caps %}

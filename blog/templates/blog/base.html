@@ -64,7 +64,7 @@
           </div>
           <div class="col-4 text-center">
             <a class="blog-header-logo text-dark" href="{% url 'blog-home' %}"
-              >SpaceX</a
+              >SpaceX - Data</a
             >
           </div>
           <div class="col-4 d-flex justify-content-end align-items-center">
@@ -83,13 +83,11 @@
           <a class="p-2 text-muted" href="{% url 'dragon' %}">Dragons</a>
           <a class="p-2 text-muted" href="{% url 'history' %}">History</a>
           <a class="p-2 text-muted" href="{% url 'landing' %}">Landing Pads</a>
-          <a class="p-2 text-muted" href="#">Launches</a>
-          <a class="p-2 text-muted" href="#">Launch Pads</a>
-          <a class="p-2 text-muted" href="#">Missions</a>
-          <a class="p-2 text-muted" href="#">Payloads</a>
-          <a class="p-2 text-muted" href="#">Rockets</a>
-          <a class="p-2 text-muted" href="#">Roadster</a>
-          <a class="p-2 text-muted" href="#">Ships</a>
+          <a class="p-2 text-muted" href="{% url 'launch' %}">Launches</a>
+          <a class="p-2 text-muted" href="{% url 'mission' %}">Missions</a>
+          <a class="p-2 text-muted" href="{% url 'payload' %}">Payloads</a>
+          <a class="p-2 text-muted" href="{% url 'rocket' %}">Rockets</a>
+          <a class="p-2 text-muted" href="{% url 'roadster' %}">Roadster</a>
         </nav>
       </div>
 

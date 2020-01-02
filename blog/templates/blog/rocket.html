@@ -1,0 +1,30 @@
+{% extends "blog/base.html" %} {% block caps %} {% load humanize %}
+
+<section
+  class="p5 mt-5 shadow rounded container"
+  style=" background-image: url(https://www.ubackground.com/_ph/12/761007050.jpg);"
+>
+  <a class="text-white">Rockets</a>
+</section>
+
+
+<div class="container mt-5 mb-3">
+  {% for c in roc reversed %}
+  <div class="list-group mb-2 card-match">
+    <a class="list-group-item list-group-item-action">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{c.rocket_name}} <small class="text-muted"> Active - {{c.active}}</small></h5>
+        <small class="text-muted">First Flight {{c.first_flight}}</small>
+      </div>
+      <p class="mb-1">{{c.description}}</p>
+      <small class="text-muted"><strong>Country</strong> - {{c.country}}</small>
+      <br>
+      <small class="text-muted"><strong>Company</strong> - {{c.company}}</small>
+      <br>
+      <small class="text-muted"><strong>Height</strong> - {{c.height.meters}} meters</small>
+      <br>
+     </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock caps %}

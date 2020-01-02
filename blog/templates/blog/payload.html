@@ -1,0 +1,40 @@
+{% extends "blog/base.html" %} {% block caps %} {% load humanize %}
+
+<section
+  class="p5 mt-5 shadow container rounded"
+  style=" background-image: url(https://www.teslarati.com/wp-content/uploads/2019/04/Falcon-Heavy-Flight-3-STP-2-S2-payload-deploy-SpaceX-2-1.jpg);"
+>
+  <a class="text-white">Payloads</a>
+</section>
+
+<div class="container mt-5 mb-3">
+  <ul class="list-group">
+    <strong>
+      <li
+      class="list-group-item bg-light d-flex justify-content-between align-items-center"
+    >
+      <span class="badge badge-dark badge-pill text-white container"
+        >Payload ID</span
+      >
+      <span class="container font-italic">Manufacturer</span>
+      <span class="container ml-5">Nationality</span>
+      <span class="container ml-5">Type</span>
+      <span class="badge badge-primary badge-pill">Mass kg</span>
+    </li>
+    </strong>
+    {% for c in pay %}
+    <li
+      class="list-group-item d-flex justify-content-between align-items-center"
+    >
+      <span class="badge badge-dark badge-pill text-white container"
+        >{{c.payload_id}}</span
+      >
+      <span class="container font-italic">{{c.manufacturer}}</span>
+      <span class="container ml-5">{{c.nationality}}</span>
+      <span class="container ml-5">{{c.payload_type}}</span>
+      <span class="badge badge-primary badge-pill">{{c.payload_mass_kg}} kg</span>
+    </li>
+    {% endfor %}
+  </ul>
+</div>
+{% endblock caps %}

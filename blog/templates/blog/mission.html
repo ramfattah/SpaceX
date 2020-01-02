@@ -1,0 +1,25 @@
+{% extends "blog/base.html" %} {% block caps %} {% load humanize %}
+
+<section
+  class="p5 mt-5 shadow rounded container"
+  style=" background-image: url(https://fsmedia.imgix.net/45/72/63/18/83b0/49f2/981f/deb194234635/the-path-that-starship-will-take-when-on-the-lunar-mission.png);"
+>
+  <a class="text-white">Missions</a>
+</section>
+
+
+<div class="container mt-5 mb-3">
+  {% for c in mis %}
+  <div class="list-group mb-2 card-match">
+    <a class="list-group-item list-group-item-action" href="{{c.website}}" target="_blank">
+      <div class="d-flex w-100 justify-content-between">
+        <h5 class="mb-1">{{c.mission_name}}</h5>
+        <small class="text-muted">Manufacturers {{c.manufacturers.0}}</small>
+      </div>
+      <p class="mb-1">{{c.description}}</p>
+      <small class="text-muted"></small>
+    </a>
+  </div>
+  {% endfor %}
+</div>
+{% endblock caps %}
