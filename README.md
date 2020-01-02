@@ -10,10 +10,10 @@
 
 
 
-**This project is built with Django 2.2.6**
+**This project is built with Django**
 
 You can view a working version of this app
-[here](https://foothubfc.herokuapp.com/)
+[here](https://data-spacex.herokuapp.com/)
 
 
 ## Get Started
@@ -52,11 +52,11 @@ Then visit `http://localhost:8000` to view the app.
 
 ## Api
 
-This project is using [scorebat API](https://www.scorebat.com/video-api/v1/)
+This project is using [SpaceX Open Source API](https://github.com/r-spacex/SpaceX-API)
 
 
 ``
-goals and highlights from a number of football leagues and tournaments including the Premier League, Champions League, La Liga, Serie A, Bundesliga and many more in a free JSON feed.
+Open Source REST API for rocket, core, capsule, pad, and launch data, created and maintained by the developers of the r/SpaceX organization.
 ``
 
 
