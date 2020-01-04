@@ -7,19 +7,21 @@
   <a class="text-white">History</a>
 </section>
 
-
-<div class="container mt-5 mb-3">
-  {% for c in his reversed %}
-  <div class="list-group mb-2 card-match">
-    <a class="list-group-item list-group-item-action">
-      <div class="d-flex w-100 justify-content-between">
-        <h5 class="mb-1">{{c.title}}</h5>
-        <small class="text-muted">Event Date {{c.event_date_utc}}</small>
-      </div>
-      <p class="mb-1">{{c.details}}</p>
-      <small class="text-muted"></small>
-    </a>
+<div class="contianer mt-5">
+  <div class="blog-post container">
+    {% for c in his reversed %}
+    <div class="card-match">
+    <h2 class="blog-post-title">{{c.title}}</h2>
+    <p class="blog-post-meta">Event Date {{c.event_date_utc}}</p>
+  
+    <p>{{c.details}}
+    </p>
+  
+    <hr />
   </div>
-  {% endfor %}
+    {% endfor %}
+  
+  </div>
 </div>
+
 {% endblock caps %}
