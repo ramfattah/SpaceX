@@ -6,22 +6,7 @@
 >
   <a class="text-white">Payloads</a>
 </section>
-
-<div class="container mt-5 mb-3">
-  <ul class="list-group">
-    <strong>
-      <li
-      class="list-group-item bg-light d-flex justify-content-between align-items-center"
-    >
-      <span class="badge badge-dark badge-pill text-white container"
-        >Payload ID</span
-      >
-      <span class="container font-italic">Manufacturer</span>
-      <span class="container ml-5">Nationality</span>
-      <span class="container ml-5">Type</span>
-      <span class="badge badge-primary badge-pill">Mass kg</span>
-    </li>
-    </strong>
+<!-- 
     {% for c in pay %}
     <li
       class="list-group-item d-flex justify-content-between align-items-center"
@@ -36,5 +21,27 @@
     </li>
     {% endfor %}
   </ul>
+</div> -->
+
+
+
+
+<div class="contianer mt-5">
+  <div class="blog-post container">
+    {% for c in pay %}
+    <div class="card-match">
+    <h2 class="blog-post-title"> {{c.payload_id}} - {{c.payload_type}}</h2>
+    <p class="">Nationality <span class="badge badge-primary badge-pill"> {{c.nationality}}</span></p>
+  
+    <p>{{c.details}}
+    </p>
+  
+    <hr />
+  </div>
+    {% endfor %}
+  
+  </div>
 </div>
+
+
 {% endblock caps %}
